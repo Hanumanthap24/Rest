@@ -11,11 +11,12 @@ import cucumber.api.java.en.When;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ResponseOptions;
-
+import java.lang.Class;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.MatcherAssert.assertThat;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.json.JSONObject;
@@ -92,17 +93,24 @@ public void User_data_required_to_fetch_5_days() {
 	params.put("APPID", "87c1c03a14ab5024bc9529d71eb13ea0");
 	params.put("q", "London");
 	params.put("mode", "json");	
-	setupRequest(body,params,"http://api.openweathermap.org/data/2.5/forecast");	
+	setupRequest(body,params,"http://api.openweathermap.org/data/2.5/forecast");
 	
-}
+	}
+
+
+
+
+
 
 
 
 @When("^I do get opertaion verify the data$")
 public void I_do_get_opertaion_verify_the_data() {	
  getOps("http://api.openweathermap.org/data/2.5/forecast");
- System.out.println(response.getBody().asString());
-
+ //System.out.println(response.getBody().asString());
+ //System.out.println(response.jsonPath().get("list[0].dt").toString());
+ 
+ 
 
 }
 
