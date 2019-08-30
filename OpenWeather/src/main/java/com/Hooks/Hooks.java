@@ -8,7 +8,9 @@ public class Hooks extends BaseUtil {
 	
 	@Before
 	public void SetUp() {
-	 accesskey=getAcccessKey();	}
+	 accesskey=getAcccessKey();
+	 
+	}
 	
 	
 

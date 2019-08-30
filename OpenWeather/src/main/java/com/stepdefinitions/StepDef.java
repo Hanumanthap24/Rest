@@ -92,9 +92,6 @@ public void User_data_required_to_fetch_5_days() {
 	params.put("APPID", "87c1c03a14ab5024bc9529d71eb13ea0");
 	params.put("q", "London");
 	params.put("mode", "json");	
-	
-	
-	
 	setupRequest(body,params,"http://api.openweathermap.org/data/2.5/forecast");	
 	
 }
